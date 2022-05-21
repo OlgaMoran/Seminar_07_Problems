@@ -1,0 +1,15 @@
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\bin\Debug\net6.0\Problem_03.exe
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\bin\Debug\net6.0\Problem_03.deps.json
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\bin\Debug\net6.0\Problem_03.runtimeconfig.json
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\bin\Debug\net6.0\Problem_03.dll
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\bin\Debug\net6.0\Problem_03.pdb
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.csproj.AssemblyReference.cache
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.AssemblyInfoInputs.cache
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.AssemblyInfo.cs
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.csproj.CoreCompileInputs.cache
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.dll
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\refint\Problem_03.dll
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.pdb
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\Problem_03.genruntimeconfig.cache
+C:\Users\olga\OneDrive\Documents\IT\GB_Разработчик\C#\Семинары\Seminar_7_Problems\Problem_03\obj\Debug\net6.0\ref\Problem_03.dll
