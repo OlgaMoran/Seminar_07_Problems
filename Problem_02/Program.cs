@@ -1,60 +1,7 @@
 ﻿// В двумерном массиве целых чисел удалить строку и столбец, 
 // на пересечении которых расположен наименьший элемент.
 
-// void PrintArrayIfThereIsNoZero(int[,] matrix)
-// {
-//     int x = matrix.GetLength(0);
-//     int y = matrix.GetLength(1);
-//     for (int i = 0; i < x; i++)
-//     {
-//         for (int j = 0; j < y; j++)
-//         {
-//             {
-//                 if (matrix[i, j] != 0)
-//                 {
-//                     if (matrix[i, j] < 10) Console.Write(matrix[i, j] + "  ");
-//                     else Console.Write($"{matrix[i, j]} ");
-//                 }
-//             }
-//         }
-//         Console.WriteLine();
-//     }
-
-// }
-
-
-
-// void FillArrayNotRepeatingNumbers(int[,] array, int count)
-// {
-//     int x = array.GetLength(0);
-//     int y = array.GetLength(1);
-//     if (count >= x * y)
-//     {
-//         int[] arr = new int[count];
-//         int a = 0;
-//        for (int i = 0; i < count; i++)
-//         {
-//             arr[i] = a + 1;
-//             a++;
-//         }
-//         for (int i = 0; i < x; i++)
-//         {
-//             for (int j = 0; j < y; j++)
-//             {
-//                 for (int k = 0; k < count; k++)
-//                 {
-//                     int newRandomValue = new Random().Next(1, arr[count-1]);
-//                     array[i, j] = newRandomValue;
-//                     count--;
-//                 }
-//             }
-//         }
-//     }
-//     else Console.WriteLine("Not enough numbers to fill the array. Enlarge the count or make the array smaller!");
-// }
-
-
-void FillArray(int[,] matrix)
+void FillTwoDimArray(int[,] matrix)
 {
     int x = matrix.GetLength(0);
     int y = matrix.GetLength(1);
@@ -62,12 +9,12 @@ void FillArray(int[,] matrix)
     {
         for (int j = 0; j < y; j++)
         {
-            matrix[i, j] = new Random().Next(0, 10);
+            matrix[i, j] = new Random().Next(10, 99);
         }
     }
 }
 
-void PrintArray(int[,] matrix)
+void PrintTwoDimArray(int[,] matrix)
 {
     int x = matrix.GetLength(0);
     int y = matrix.GetLength(1);
@@ -75,29 +22,98 @@ void PrintArray(int[,] matrix)
     {
         for (int j = 0; j < y; j++)
         {
-            Console.Write($"{matrix[i, j]} ");
+            Console.Write($"{matrix[i, j]}   ");
         }
         Console.WriteLine();
     }
 }
 
-int MinArray(int[,] array)
+void PrintTwoDimArrayNoZeros(int[,] matrix, int[] Row)
 {
-    int x = array.GetLength(0);
-    int y = array.GetLength(1);
-    int min = array[0, 0];
+    int x = matrix.GetLength(0);
+    int y = matrix.GetLength(1);
     for (int i = 0; i < x; i++)
     {
         for (int j = 0; j < y; j++)
         {
-            if (array[i, j] < min) min = array[i, j];
+            if (matrix[i, j] != 0) Console.Write($"{matrix[i, j]}   ");
+        }
+        if(Row[i]==0) Console.WriteLine();
+    }
+}
+
+int LowestValue(int[,] Array)
+{
+    int minValue = Array[0, 0];
+    for (int i = 0; i < Array.GetLength(0); i++)
+    {
+        for (int j = 0; j < Array.GetLength(1); j++)
+        {
+            if (Array[i, j] < minValue) minValue = Array[i, j];
         }
     }
-   return min;
+    return minValue;
 }
-System.Console.WriteLine();
 
-int[,] myArray = new int[5, 5];
-FillArray(myArray);
-PrintArray(myArray);
-MinArray(myArray);
+int RowToDelete(int[] Array)
+{
+    int r = 0;
+    for (int i = 0; i < Array.Length; i++)
+    {
+        {
+            if (Array[i] == 1) r = i;
+        }
+    }
+    return r;
+}
+
+int ColumnToDelete(int[] Array)
+{
+    int c = 0;
+    for (int i = 0; i < Array.Length; i++)
+    {
+        {
+            if (Array[i] == 1) c = i;
+        }
+    }
+    return c;
+}
+
+int[,] array = new int[10, 5];
+FillTwoDimArray(array);
+PrintTwoDimArray(array);
+Console.WriteLine();
+
+int[] rows = new int[array.GetLength(0)];
+int[] columns = new int[array.GetLength(1)];
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        if (array[i, j] == LowestValue(array))
+        {
+            rows[i] = 1;
+            columns[j] = 1;
+        }
+    }
+}
+
+Console.WriteLine($"lowest value = {LowestValue(array)}");
+Console.WriteLine();
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        if (i == RowToDelete(rows)) array[i, j] = 0;
+    }   
+}
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        if (j == ColumnToDelete(columns)) array[i, j] = 0;
+    }   
+}
+
+PrintTwoDimArrayNoZeros(array, rows);
