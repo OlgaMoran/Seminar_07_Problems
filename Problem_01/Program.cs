@@ -75,5 +75,5 @@ for (int i = 0; i < m; i++)
         if (spiral[i, j] < n) Console.Write(spiral[i, j] + ",  ");
         else Console.Write(spiral[i, j] + ", ");
     }
-System.Console.WriteLine("");
+    System.Console.WriteLine("");
 }
